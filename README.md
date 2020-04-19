@@ -4,7 +4,8 @@ Enable printf() function to work with USB Virtual COM Port (STM32H743ZI)
 __STM32CubeMX__
 1. Turn on USB_OTG_FS with mode Device_Only
 2. In the Middleware turn on USB_DEVICE with class Communication Device Class (Virtual Com Port)
-3. Generate Code
+3. Default settings
+4. Generate Code
 
 __main.c__
 1. ```#include <stdio.h>```
