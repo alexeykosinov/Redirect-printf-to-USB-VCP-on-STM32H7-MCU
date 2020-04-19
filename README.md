@@ -1,4 +1,4 @@
-# Redirect-printf-to-USB-VCP-on-STM32H7-MCU
+# Redirect printf() to USB Virtual COM Port on STM32H7 MCU
 Enable printf() function to work with USB Virtual COM Port (STM32H743ZI)
 
 __STM32CubeMX__
