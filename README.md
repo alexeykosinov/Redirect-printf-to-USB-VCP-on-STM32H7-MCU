@@ -17,3 +17,15 @@ int _write(int file, char *ptr, int len) {
 ```
 That's it! 
 Now you can use printf() anywere you want.
+
+__NOTICE!__
+When I started to using FreeRTOS I've noticed that printf displays an incorrect value.
+Digging a bit, I found out that if you are enable the delay after CDC_Transmit_FS(), then everything works fine, so:
+```
+int _write(int file, char *ptr, int len) { 
+    CDC_Transmit_FS((uint8_t*) ptr, len); 
+    osDelay(1);
+    return len; 
+}
+```
+work's for me!
