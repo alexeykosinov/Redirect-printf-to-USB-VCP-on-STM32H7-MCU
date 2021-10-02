@@ -15,6 +15,12 @@ int _write(int file, char *ptr, int len) {
     CDC_Transmit_FS((uint8_t*) ptr, len); return len; 
 }
 ```
+For cpp project:
+```
+extern "C" int _write(int file, char *ptr, int len) { 
+    CDC_Transmit_FS((uint8_t*) ptr, len); return len; 
+}
+```
 That's it! 
 Now you can use printf() anywere you want.
 
